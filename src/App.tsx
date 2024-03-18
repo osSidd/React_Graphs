@@ -1,9 +1,11 @@
 import './App.css'
 import TextBox from './components/textbox/textbox'
-import Designing from './stages/design'
-import Manufacturing from './stages/manufacture'
-import Planning from './stages/planning'
-// import Curve from './components/curve'
+import Designing from './stages/first/design'
+import Manufacturing from './stages/first/manufacture'
+import Planning from './stages/first/planning'
+import Research from './stages/first/research'
+import Sales from './stages/first/sales'
+
 export default function App(){
   return (
     <div>
@@ -17,9 +19,11 @@ export default function App(){
           text='Product'
           noOfCurves={5}
         />
+        <Research/>
         <Planning/>
-        <Manufacturing/>
         <Designing/>
+        <Manufacturing/>
+        <Sales/>
       </svg>
     </div>
   )
