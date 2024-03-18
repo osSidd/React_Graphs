@@ -1,11 +1,25 @@
-import Rect from './components/textbox/rect'
-import Curve from './components/curve'
+import './App.css'
+import TextBox from './components/textbox/textbox'
+import Designing from './stages/design'
+import Manufacturing from './stages/manufacture'
+import Planning from './stages/planning'
+// import Curve from './components/curve'
 export default function App(){
   return (
     <div>
-      <svg width='100vw' height='100vh' style={{background:'pink'}}>
+      <h1>Dashboard</h1>
+      <svg>
         {/* <Curve/> */}
-        <Rect fill='blue' x={50} y={50}/>
+        <TextBox
+          x={0}
+          y={275}
+          boxFill='brown'
+          text='Product'
+          noOfCurves={5}
+        />
+        <Planning/>
+        <Manufacturing/>
+        <Designing/>
       </svg>
     </div>
   )
