@@ -6,11 +6,12 @@ export default function Planning(){
     return (
       <g>
         <TextBox
-          x={250}
+          x={195}
           y={150}
-          boxFill='pink'
+          boxFill='#8293ff'
           text='Planning'
           noOfCurves={2}
+          width={200}
         />
         <PRD/>
         <Specs/>

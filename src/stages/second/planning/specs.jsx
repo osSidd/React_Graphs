@@ -3,11 +3,12 @@ import TextBox from '../../../components/textbox/textbox'
 export default function Specs(){
     return(
         <TextBox
-          x={500}
-          y={175}
-          boxFill='pink'
+          x={470}
+          y={180}
+          boxFill='#8293ff'
           text='Specs'
           noOfCurves={0}
+          width={150}
         />
     )
 }

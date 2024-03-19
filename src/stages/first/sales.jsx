@@ -6,11 +6,12 @@ export default function Sales(){
     return (
       <g>
         <TextBox
-          x={250}
+          x={195}
           y={525}
           boxFill='purple'
           text='Sales/Marketing'
           noOfCurves={2}
+          width={200}
         />
         <Online/>
         <Dealership/>

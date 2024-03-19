@@ -6,11 +6,12 @@ export default function Manufacturing(){
     return (
       <g>
         <TextBox
-          x={250}
+          x={195}
           y={400}
-          boxFill='burlywood'
+          boxFill='#4f7c51'
           text='Manufacturing'
           noOfCurves={2}
+          width={200}
         />
         <Material/>
         <Production/>

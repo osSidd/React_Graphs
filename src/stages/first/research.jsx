@@ -6,11 +6,12 @@ export default function Research(){
     return (
       <g>
         <TextBox
-          x={250}
+          x={195}
           y={25}
-          boxFill='steelblue'
+          boxFill='#2a4494'
           text='Research'
           noOfCurves={2}
+          width={200}
         />
         <g>
           <External/>

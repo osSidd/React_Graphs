@@ -3,11 +3,12 @@ import TextBox from '../../../components/textbox/textbox'
 export default function PRD(){
     return(
         <TextBox
-          x={500}
+          x={470}
           y={120}
-          boxFill='pink'
+          boxFill='#8293ff'
           text='PRD'
           noOfCurves={0}
+          width={150}
         />
     )
 }

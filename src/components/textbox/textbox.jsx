@@ -1,15 +1,16 @@
 import Curve from "./curve"
 
-export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250}){
+export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250, width=180}){
     const curveArray = Array.from(Array(noOfCurves).keys())
-    const width = 180
     const height = 40
+    const baseHeight = 200
+    const innerCurveFactor = curveYEnd >= 250 ? 8 : 2
     return(
         <g>
             <rect
                 fill={boxFill}
                 x={x}
-                y={y}
+                y={y+baseHeight}
                 width={width}
                 height={height}
             />
@@ -18,8 +19,8 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250}
                 stroke="none"
                 fontSize={16}
                 fontWeight={600}
-                x={x+20}
-                y={y+25}
+                x={x+15}
+                y={y+ baseHeight +25}
             >{text}</text>
             {
                 curveArray.map((curve, index, arr) => {
@@ -33,14 +34,14 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250}
                             <Curve
                                 curveType="l"
                                 xStart={x+width}
-                                yStart={y+(Math.floor(height/2))}
+                                yStart={y+baseHeight+(Math.floor(height/2))}
                                 xEnd={75}
                                 yEnd={0}
                             /> :
                             <Curve
                                 curveType="c"
                                 xStart={x+width}
-                                yStart={y+(Math.floor(height/2))}
+                                yStart={y+baseHeight+(Math.floor(height/2))}
                                 x1={`${curve >= 2 ? 50 : 75}`}
                                 xEnd={75}
                                 yEnd={`${curve >= 2 ? (sign > 0 ? curveYEnd : -curveYEnd) : (sign > 0 ? (parseInt(curveYEnd/2)) : -(parseInt(curveYEnd/2)))}`}
@@ -50,10 +51,10 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250}
                             <Curve
                                 curveType="c"
                                 xStart={x+width}
-                                yStart={y+(Math.floor(height/2))}
+                                yStart={y+baseHeight+(Math.floor(height/2))}
                                 x1={`${curve >= 2 ? 50 : 75}`}
                                 xEnd={75}
-                                yEnd={`${curve >= 2 ? (sign > 0 ? curveYEnd : -curveYEnd) : (sign > 0 ? (curveYEnd/8) : -(curveYEnd/8))}`}
+                                yEnd={`${curve >= 2 ? (sign > 0 ? curveYEnd : -curveYEnd) : (sign > 0 ? (curveYEnd/innerCurveFactor) : -(curveYEnd/innerCurveFactor))}`}
                             />
                         }
                     </g>

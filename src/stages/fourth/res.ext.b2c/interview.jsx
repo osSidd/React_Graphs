@@ -1,13 +1,14 @@
 import TextBox from '../../../components/textbox/textbox'
 
-export default function Internal(){
+export default function Interview(){
     return(
         <TextBox
-          x={470}
-          y={55}
+          x={870}
+          y={-85}
           boxFill='#2a4494'
-          text='Internal'
+          text='Interview'
           noOfCurves={0}
+          curveYEnd={100}
           width={150}
         />
     )

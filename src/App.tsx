@@ -15,9 +15,10 @@ export default function App(){
         <TextBox
           x={0}
           y={275}
-          boxFill='brown'
-          text='Product'
+          boxFill='#ed1776'
+          text='Project'
           noOfCurves={5}
+          width={120}
         />
         <Research/>
         <Planning/>
