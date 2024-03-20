@@ -6,7 +6,7 @@ export default function Designing(){
 
 
     return (
-      <g onMouseOver={() => {console.log('hi')}}>
+      <g>
         <TextBox
           x={195}
           y={275}

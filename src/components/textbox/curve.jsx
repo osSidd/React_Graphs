@@ -4,7 +4,7 @@ export default function Curve({xStart, yStart, x1, xEnd, yEnd, curveType='c'}){
         <path
             fill="none"
             stroke="#777"
-            strokeWidth={5}
+            strokeWidth={2}
             d={`M${xStart} ${yStart} c${x1} ${0} ${xEnd-50} ${yEnd} ${xEnd} ${yEnd}`}
         >
         </path>
@@ -13,7 +13,7 @@ export default function Curve({xStart, yStart, x1, xEnd, yEnd, curveType='c'}){
         <path
             fill="none"
             stroke="#777"
-            strokeWidth={5}
+            strokeWidth={2}
             d={`M${xStart} ${yStart} l${xEnd} ${yEnd}`}
         ></path>
     )

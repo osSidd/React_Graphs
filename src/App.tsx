@@ -5,13 +5,13 @@ import Manufacturing from './stages/first/manufacture'
 import Planning from './stages/first/planning'
 import Research from './stages/first/research'
 import Sales from './stages/first/sales'
+import Tooltip from './components/tooltip/tooltip'
 
 export default function App(){
   return (
     <div>
       <h1>Dashboard</h1>
       <svg>
-        {/* <Curve/> */}
         <TextBox
           x={0}
           y={275}
@@ -26,6 +26,7 @@ export default function App(){
         <Manufacturing/>
         <Sales/>
       </svg>
+      <Tooltip/>
     </div>
   )
 }

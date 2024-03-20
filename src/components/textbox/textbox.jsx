@@ -1,27 +1,49 @@
 import Curve from "./curve"
+import useMap from '../../hooks/useMap'
+import { debounce } from "../../utils/functions"
 
 export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250, width=180}){
+
+    const {dispatch} = useMap()
+
     const curveArray = Array.from(Array(noOfCurves).keys())
     const height = 40
     const baseHeight = 200
     const innerCurveFactor = curveYEnd >= 250 ? 8 : 2
+
+    function mouseOver(e){
+        dispatch({
+            type:'SET_TOOLTIP',
+            payload: {
+                x: e.pageX + 25,
+                y: e.pageY - 75
+            }
+        })
+    }
+
+    function mouseOut(e){
+        dispatch({type: 'UNSET_TOOLTIP'})
+    }
+
     return(
         <g>
-            <rect
-                fill={boxFill}
-                x={x}
-                y={y+baseHeight}
-                width={width}
-                height={height}
-            />
-            <text
-                fill="white"
-                stroke="none"
-                fontSize={16}
-                fontWeight={600}
-                x={x+15}
-                y={y+ baseHeight +25}
-            >{text}</text>
+            <g onMouseOver={(e) => {debounce(mouseOver(e), 2000)}} onMouseOut={(e) => {debounce(mouseOut(e), 750)}}>
+                <rect
+                    fill={boxFill}
+                    x={x}
+                    y={y+baseHeight}
+                    width={width}
+                    height={height}
+                />
+                <text
+                    fill="white"
+                    stroke="none"
+                    fontSize={16}
+                    fontWeight={600}
+                    x={x+15}
+                    y={y+ baseHeight +25}
+                >{text}</text>
+            </g>
             {
                 curveArray.map((curve, index, arr) => {
                     let sign = Math.pow(-1, curve)
