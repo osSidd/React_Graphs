@@ -40,6 +40,8 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250,
                     fill={boxFill}
                     x={x}
                     y={y+baseHeight}
+                    rx={5}
+                    ry={5}
                     width={width}
                     height={height}
                 />

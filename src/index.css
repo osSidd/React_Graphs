@@ -8,3 +8,8 @@ body{
   padding: 2rem;
   position: relative;
 }
+
+footer{
+  text-align: center;
+  font-size: small;
+}

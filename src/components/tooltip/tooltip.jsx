@@ -12,7 +12,7 @@ export default function Tooltip(){
 
     return(
         <div id="tooltip" style={style}>
-            {tooltip.stageText==='Project'? <></> : <small>stage: {tooltip.parentStage}</small>}
+            {tooltip.stageText==='Project'? <></> : <small><span style={{fontWeight:600}}>stage</span>: {tooltip.parentStage}</small>}
             <p id='stage-text'>{tooltip.stageText}</p>
             {tooltip.stageText==='Project'? <></> :<p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 

@@ -2,7 +2,7 @@ svg{
   height: 120vh;
   width: 85vw;
   display: block;
-  margin: 5rem auto 0 auto;
+  margin: 0 auto 5rem auto;
   /* background-color:antiquewhite; */
 }
 
@@ -15,3 +15,4 @@ svg text{
 svg rect, text{
   cursor: pointer;
 }
+
