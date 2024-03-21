@@ -11,7 +11,7 @@ export default function B2C(){
           x={695}
           y={-35}
           boxFill='#2a4494'
-          text='B2C'
+          text='Research.External.B2C'
           noOfCurves={4}
           curveYEnd={100}
           width={100}

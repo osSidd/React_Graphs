@@ -2,7 +2,7 @@ svg{
   height: 120vh;
   width: 85vw;
   display: block;
-  margin: auto;
+  margin: 5rem auto 0 auto;
   /* background-color:antiquewhite; */
 }
 

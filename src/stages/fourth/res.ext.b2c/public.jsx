@@ -6,7 +6,7 @@ export default function Public(){
           x={870}
           y={15}
           boxFill='#2a4494'
-          text='Public Data'
+          text='Research.External.B2C.Public Data'
           noOfCurves={0}
           curveYEnd={100}
           width={150}

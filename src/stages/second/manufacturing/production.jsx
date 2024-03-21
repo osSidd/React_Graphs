@@ -6,7 +6,7 @@ export default function Production(){
           x={470}
           y={430}
           boxFill='#4f7c51'
-          text='Production'
+          text='Manufacturing.Production'
           noOfCurves={0}
           width={150}
         />

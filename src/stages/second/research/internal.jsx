@@ -6,7 +6,7 @@ export default function Internal(){
           x={470}
           y={55}
           boxFill='#2a4494'
-          text='Internal'
+          text='Research.Internal'
           noOfCurves={0}
           width={150}
         />

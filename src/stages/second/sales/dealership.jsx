@@ -6,7 +6,7 @@ export default function Dealership(){
           x={470}
           y={555}
           boxFill='purple'
-          text='Dealership'
+          text='Sales.Dealership'
           noOfCurves={0}
           width={150}
         />

@@ -9,7 +9,7 @@ export default function External(){
           x={470}
           y={-5}
           boxFill='#2a4494'
-          text='External'
+          text='Research.External'
           noOfCurves={2}
           width={150}
         />

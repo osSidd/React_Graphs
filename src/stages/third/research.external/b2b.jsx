@@ -6,7 +6,7 @@ export default function B2B(){
           x={695}
           y={25}
           boxFill='#2a4494'
-          text='B2B'
+          text='Research.External.B2B'
           noOfCurves={0}
           width={100}
         />

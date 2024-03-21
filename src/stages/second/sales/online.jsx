@@ -6,7 +6,7 @@ export default function Online(){
           x={470}
           y={495}
           boxFill='purple'
-          text='Online'
+          text='Sales.Online'
           noOfCurves={0}
           width={150}
         />

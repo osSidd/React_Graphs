@@ -6,7 +6,7 @@ export default function PRD(){
           x={470}
           y={120}
           boxFill='#8293ff'
-          text='PRD'
+          text='Planning.PRD'
           noOfCurves={0}
           width={150}
         />

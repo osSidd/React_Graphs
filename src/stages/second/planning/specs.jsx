@@ -6,7 +6,7 @@ export default function Specs(){
           x={470}
           y={180}
           boxFill='#8293ff'
-          text='Specs'
+          text='Planning.Specs'
           noOfCurves={0}
           width={150}
         />

@@ -6,7 +6,7 @@ export default function Interview(){
           x={870}
           y={-85}
           boxFill='#2a4494'
-          text='Interview'
+          text='Research.External.B2C.Interview'
           noOfCurves={0}
           curveYEnd={100}
           width={150}

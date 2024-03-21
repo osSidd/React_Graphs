@@ -6,7 +6,7 @@ export default function Material(){
           x={470}
           y={370}
           boxFill='#4f7c51'
-          text='Material'
+          text='Manufacturing.Material'
           noOfCurves={0}
           width={150}
         />

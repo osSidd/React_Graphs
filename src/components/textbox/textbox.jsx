@@ -13,14 +13,16 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250,
     const delay = 250
     const stages = text.split('.')
     const stageText = stages[stages.length-1]
-    const parentStage = Array.isArray(stages) ? stages.join('>') : ''
+    const parentStage = Array.isArray(stages) ? stages.join(' > ') : ''
 
     const mouseOver = debounce((e) => {
+        const x = e.pageX > 1000 ? 1000 : e.pageX
+        const y = e.pageX > 1000 ? e.pageY - 200 : e.pageY - 150
         dispatch({
             type:'SET_TOOLTIP',
             payload: {
-                x: e.pageX + 25,
-                y: e.pageY - 150,
+                x,
+                y,
                 text:stageText,
                 parentStage,
             }
