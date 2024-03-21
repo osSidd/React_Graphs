@@ -10,7 +10,9 @@ const reducer = (state, action) => {
                 tooltip:{
                     x: action.payload.x,
                     y: action.payload.y,
-                    display:'block'
+                    stageText: action.payload.text,
+                    parentStage: action.payload.parentStage,
+                    display:'flex'
                 }
             }
         case 'UNSET_TOOLTIP':
@@ -19,13 +21,6 @@ const reducer = (state, action) => {
                 tooltip: {
                     ...state.tooltip,
                     display:'none'
-                }
-            }
-        case 'SET_STAGE':
-            return {
-                ...state,
-                stage: {
-                    text: action.payload
                 }
             }
         default:
@@ -39,11 +34,10 @@ export default function MapContextProvider({children}){
         tooltip: {
             x:0,
             y:0,
-            display:'block',
+            display:'none',
+            stageText: '',
+            parentStage: '',
         },
-        stage:{
-            text: ''
-        }
     })
 
     return (

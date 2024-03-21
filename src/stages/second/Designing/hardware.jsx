@@ -6,7 +6,7 @@ export default function Hardware(){
           x={470}
           y={245}
           boxFill='#e96343'
-          text='Hardware'
+          text='Designing.Hardware'
           noOfCurves={0}
           width={150}
         />

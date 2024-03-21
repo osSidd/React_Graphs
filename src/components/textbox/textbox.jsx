@@ -10,24 +10,30 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250,
     const height = 40
     const baseHeight = 200
     const innerCurveFactor = curveYEnd >= 250 ? 8 : 2
+    const delay = 250
+    const stages = text.split('.')
+    const stageText = stages[stages.length-1]
+    const parentStage = Array.isArray(stages) ? stages.join('>') : ''
 
-    function mouseOver(e){
+    const mouseOver = debounce((e) => {
         dispatch({
             type:'SET_TOOLTIP',
             payload: {
                 x: e.pageX + 25,
-                y: e.pageY - 75
+                y: e.pageY - 150,
+                text:stageText,
+                parentStage,
             }
         })
-    }
+    },delay)
 
-    function mouseOut(e){
+    function mouseOut(){
         dispatch({type: 'UNSET_TOOLTIP'})
     }
 
     return(
         <g>
-            <g onMouseOver={(e) => {debounce(mouseOver(e), 2000)}} onMouseOut={(e) => {debounce(mouseOut(e), 750)}}>
+            <g onMouseOver={(e) => mouseOver(e)} onMouseOut={debounce(mouseOut, delay)}>
                 <rect
                     fill={boxFill}
                     x={x}
@@ -42,7 +48,7 @@ export default function TextBox({x,y,boxFill, text, noOfCurves=2, curveYEnd=250,
                     fontWeight={600}
                     x={x+15}
                     y={y+ baseHeight +25}
-                >{text}</text>
+                >{stageText}</text>
             </g>
             {
                 curveArray.map((curve, index, arr) => {

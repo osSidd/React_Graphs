@@ -1,7 +1,19 @@
 #tooltip{
-    height: 5rem;
-    width: 5rem;
-    background-color: brown;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+    width: 12rem;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    box-shadow: 5px 5px 45px 5px #3332;
     position:absolute;
     z-index: 5;
+    text-align: center;
+}
+
+#stage-text{
+    font-weight: 700;
+    margin-bottom: -2.5px;
 }

@@ -6,7 +6,7 @@ export default function Software(){
           x={470}
           y={305}
           boxFill='#e96343'
-          text='Software'
+          text='Design.Software'
           noOfCurves={0}
           width={150}
         />
