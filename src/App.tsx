@@ -1,9 +1,21 @@
+// import {Profiler} from 'react'
 import {Box} from '@mui/material'
-import Pollution from './pollution'
+// import Pollution from './pollution'
+
+import Barchart from './components/barchart'
+
 export default function App(){
+
+  function onRender(id, phase, actD, baseD, st, ct){
+    console.log(id, phase, actD, baseD, st, ct)
+  }
+
   return (
       <Box>
-        <Pollution/>
+        {/* <Profiler id='pollution' onRender={onRender}> */}
+          {/* <Pollution/> */}
+        {/* </Profiler> */}
+        <Barchart height={400} width={500}/>
       </Box>
   )
 }
